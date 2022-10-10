@@ -14,13 +14,12 @@ namespace ProjAgenda_EF_CF
             Person p = new Person();
 
             Console.WriteLine("AGENDA DE TELEFONES:");
-            Console.WriteLine("1-ADICIONAR CONTATO\n2-EDITAR CONTATO\n3-LISTAR CONTATOS\n4-BUSCAR CONTATO\n4-DELETAR CONTATO");
+            Console.WriteLine("1-ADICIONAR CONTATO\n2-LISTAR CONTATOS\n3-EDITAR CONTATOS\n4-BUSCAR CONTATO\n4-DELETAR CONTATO");
             int opc = int.Parse(Console.ReadLine());
             switch(opc)
             {
                 case 1:
-                    
-                        p.inserircontato();
+                    p.inserircontato();
                     break;
 
                 case 2:

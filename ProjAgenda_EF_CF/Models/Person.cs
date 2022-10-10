@@ -47,7 +47,7 @@ namespace ProjAgenda_EF_CF.Models
                 Console.WriteLine(item.ToString());
                 Telephone t = new Telephone();
                 Person p = new Person();
-                Telephone find = new PersonContext().Telephone.FirstOrDefault(p1 => p.Id == t.Id);
+                Telephone find = new PersonContext().Telephone.FirstOrDefault(pl => p.Id == t.Id);
                Console.WriteLine(find.ToString());
             }
             Console.ReadKey();
