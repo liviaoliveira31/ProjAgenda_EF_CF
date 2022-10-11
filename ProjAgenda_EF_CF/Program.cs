@@ -12,20 +12,36 @@ namespace ProjAgenda_EF_CF
         static void Main(string[] args)
         {
             Person p = new Person();
-
-            Console.WriteLine("AGENDA DE TELEFONES:");
-            Console.WriteLine("1-ADICIONAR CONTATO\n2-LISTAR CONTATOS\n3-EDITAR CONTATOS\n4-BUSCAR CONTATO\n4-DELETAR CONTATO");
-            int opc = int.Parse(Console.ReadLine());
-            switch(opc)
+            do
             {
-                case 1:
-                    p.inserircontato();
-                    break;
+                Console.Clear();
+                Console.WriteLine("AGENDA DE TELEFONES:");
+                Console.WriteLine("1-ADICIONAR CONTATO\n2-LISTAR CONTATOS\n3-EDITAR CONTATOS\n4-BUSCAR CONTATO\n5-DELETAR CONTATO");
+                int opc = int.Parse(Console.ReadLine());
 
-                case 2:
-                    p.ImprimirTodos();
-                    break;
-            }
+                switch (opc)
+                {
+                    case 1:
+                        p.InsertContact();
+                        break;
+
+                    case 2:
+                        p.SelectAll();
+                        break;
+                    case 3:
+                        p.UpdateContact();
+                        break;
+                    case 4:
+                        p.SelectOne();
+                        break;
+                    case 5:
+                        p.DeleteContact();
+                        break;
+                    case 0:
+                        Environment.Exit(0);
+                        break;
+                }
+            } while (true);
         }
     }
 }
